@@ -20,7 +20,7 @@ $wgExtensionCredits['other'][] = array(
 	'name' => 'SoftwareVersion',
 	'author' => 'Jack Phoenix',
 	'version' => '0.4',
-	'url' => 'http://www.mediawiki.org/wiki/Extension:SoftwareVersion',
+	'url' => 'https://www.mediawiki.org/wiki/Extension:SoftwareVersion',
 	'description' => 'Customizes [[Special:Version]] for ShoutWiki',
 );
 
