@@ -1,0 +1,20 @@
+{
+	"name": "SoftwareVersion",
+	"version": "0.6.1",
+	"author": [
+		"Jack Phoenix"
+	],
+	"license-name": "GPL-2.0+",
+	"url": "https://www.mediawiki.org/wiki/Extension:SoftwareVersion",
+	"description": "Customizes [[Special:Version]] for ShoutWiki",
+	"type": "other",
+	"AutoloadClasses": {
+		"ShoutWikiSoftwareVersion": "ShoutWikiSoftwareVersion.class.php"
+	},
+	"Hooks": {
+		"SoftwareInfo": [
+			"ShoutWikiSoftwareVersion::addShoutWikiInfo"
+		]
+	},
+	"manifest_version": 1
+}
