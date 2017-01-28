@@ -6,10 +6,15 @@
 	],
 	"license-name": "GPL-2.0+",
 	"url": "https://www.mediawiki.org/wiki/Extension:SoftwareVersion",
-	"description": "Customizes [[Special:Version]] for ShoutWiki",
+	"descriptionmsg": "softwareversion-desc",
 	"type": "other",
 	"AutoloadClasses": {
 		"ShoutWikiSoftwareVersion": "ShoutWikiSoftwareVersion.class.php"
+	},
+	"MessagesDirs": {
+		"SoftwareVersion": [
+			"i18n"
+		]
 	},
 	"Hooks": {
 		"SoftwareInfo": [
