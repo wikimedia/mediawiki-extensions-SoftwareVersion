@@ -1,4 +1,10 @@
 {
-	"@metadata": {},
-	"softwareversion-desc": "Customizes [[Special:Version]] for ShoutWiki"
+	"@metadata": {
+		"authors": [
+			"Jack Phoenix",
+			"Samantha Nguyen"
+		]
+	},
+	"softwareversion-desc": "Customizes [[Special:Version]], originally for ShoutWiki but can be used by other third-parties.",
+	"softwareversion-wiki-link": ""
 }

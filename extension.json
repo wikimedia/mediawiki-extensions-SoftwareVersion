@@ -1,15 +1,22 @@
 {
 	"name": "SoftwareVersion",
-	"version": "0.6.1",
+	"version": "0.6.2",
 	"author": [
-		"Jack Phoenix"
+		"Jack Phoenix",
+		"Samantha Nguyen"
 	],
 	"license-name": "GPL-2.0+",
 	"url": "https://www.mediawiki.org/wiki/Extension:SoftwareVersion",
 	"descriptionmsg": "softwareversion-desc",
 	"type": "other",
+	"config": {
+		"SoftwareVersionExecutablePath": {
+			"unix": "/usr/bin/svn",
+			"windows": "C:\/Program Files\/TortoiseSVN\bin\/svn.exe"
+		}
+	},
 	"AutoloadClasses": {
-		"ShoutWikiSoftwareVersion": "ShoutWikiSoftwareVersion.class.php"
+		"SoftwareVersion": "SoftwareVersion.class.php"
 	},
 	"MessagesDirs": {
 		"SoftwareVersion": [
@@ -18,7 +25,7 @@
 	},
 	"Hooks": {
 		"SoftwareInfo": [
-			"ShoutWikiSoftwareVersion::addShoutWikiInfo"
+			"SoftwareVersion::addSVNInfo"
 		]
 	},
 	"manifest_version": 1

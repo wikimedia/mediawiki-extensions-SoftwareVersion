@@ -1,4 +1,10 @@
 {
-	"@metadata": {},
-	"softwareversion-desc": "{{desc|name=SoftwareVersion|url=https://www.mediawiki.org/wiki/Extension:SoftwareVersion}}"
+	"@metadata": {
+		"authors": [
+			"Jack Phoenix",
+			"Samantha Nguyen"
+		]
+	},
+	"softwareversion-desc": "{{desc|name=SoftwareVersion|url=https://www.mediawiki.org/wiki/Extension:SoftwareVersion}}",
+	"softwareversion-wiki-link": "Wiki link to be customized so it can be used on Special:Version. {{ignore}}"
 }

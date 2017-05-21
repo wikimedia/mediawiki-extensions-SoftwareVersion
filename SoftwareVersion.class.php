@@ -1,7 +1,10 @@
 <?php
 /**
- * SoftwareVersion extension - customizes Special:Version for ShoutWiki
- * by changing MediaWiki's version to $wgVersion and adding ShoutWiki component
+ * SoftwareVersion extension - customizes Special:Version for wikis
+ * by changing MediaWiki's version to $wgVersion and adding local wiki component
+ *
+ * This was originally developed for ShoutWiki but has been rewritten so it's easier
+ * for third-parties to use this extension.
  *
  * @file
  * @ingroup Extensions
@@ -10,16 +13,17 @@
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
  */
 
-class ShoutWikiSoftwareVersion {
+class SoftwareVersion {
 
 	/**
-	 * Adds ShoutWiki component into Special:Version and sets MW's version to $wgVersion
+	 * Adds local wiki component into Special:Version and sets MW's version to $wgVersion
 	 *
 	 * @param array $software Array of software information
 	 * @return bool
 	 */
-	public static function addShoutWikiInfo( &$software ) {
-		global $wgVersion, $IP;
+	public static function addSVNInfo( &$software ) {
+		global $wgVersion, $wgCanonicalServer, $wgSitename,
+		$wgSoftwareVersionExecutablePath, $IP;
 
 		// Set MW version to $wgVersion
 		$software['[https://www.mediawiki.org/ MediaWiki]'] = $wgVersion;
@@ -37,19 +41,24 @@ class ShoutWikiSoftwareVersion {
 		// final output that an end-user viewing Special:Version sees is something
 		// like "r1811 (2012-05-16 00:31:45 +0300)".
 		if ( !wfIsWindows() ) {
-			$svnInfo = wfShellExec( '/usr/bin/svn info ' . $IP, $error );
+			$svnInfo = wfShellExec( $wgSoftwareVersionExecutablePath['unix'] . ' info ' . $IP, $error );
 			$newline = "\n";
 		} else {
-			// why yes, I'm hardcoding my TortoiseSVN's installation path here
-			$svnInfo = wfShellExec( '"C:\Program Files\TortoiseSVN\bin\svn.exe" info ' . $IP, $error );
+			$svnInfo = wfShellExec( $wgSoftwareVersionExecutablePath['windows'] . ' info ' . $IP, $error );
 			$newline = "\r\n";
 		}
 
 		$json = json_encode( $svnInfo );
 		$exploded = explode( $newline, $svnInfo );
 
-		// Add ShoutWiki component (revision number and last changed date)
-		$software['[http://www.shoutwiki.com/ ShoutWiki]'] =
+		if ( $this->getMsg( 'softwareversion-wiki-link' )->isDisabled() ) {
+			$wikiLink = "[$wgCanonicalServer $wgSitename]";
+		} else {
+			$wikiLink = wfMessage( 'softwareversion-wiki-link' )->text();
+		}
+
+		// Add local wiki component (revision number and last changed date)
+		$software[$wikiLink] =
 			str_replace( 'Revision: ', 'r', $exploded[6] ) /* Revision */ .
 			' (' .
 			str_replace( 'Last Changed Date: ', '', preg_replace( '/ \(.*\)/', '', $exploded[11] ) ) ./* Last Changed Date */
