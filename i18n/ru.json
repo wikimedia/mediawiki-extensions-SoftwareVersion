@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Facenapalm"
+		]
+	},
+	"softwareversion-desc": "Модифицирует [[Special:Version]]. Изначально рассчитано для ShoutWiki, но может быть использовано сторонними проектами."
+}
