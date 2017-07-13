@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gomoko"
+		]
+	},
+	"softwareversion-desc": "Personnalise [[Special:Version]], initialement pour ShoutWiki, mais peut être utilisé par des parties tierces."
+}

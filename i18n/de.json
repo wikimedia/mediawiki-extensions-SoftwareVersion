@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Metalhead64"
+			"Metalhead64",
+			"Kghbln"
 		]
 	},
-	"softwareversion-desc": "Passt die Anzeige von [[Special:Version]] an. Ursprünglich für ShoutWiki entwickelt, kann es jedoch auch von anderen Wikis genutzt werden."
+	"softwareversion-desc": "Passt die Anzeige von [[Special:Version]] an. Ursprünglich für ShoutWiki entwickelt, kann es jedoch auch von anderen Wikis genutzt werden"
 }
