@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Felipe L. Ewald"
+		]
+	},
+	"softwareversion-desc": "Personaliza [[Special:Version]], originalmente para ShoutWiki, mas pode ser usada por terceiros."
+}
