@@ -1,6 +1,6 @@
 {
 	"name": "SoftwareVersion",
-	"version": "0.6.2",
+	"version": "0.6.3",
 	"author": [
 		"Jack Phoenix",
 		"Samantha Nguyen"
@@ -24,9 +24,7 @@
 		]
 	},
 	"Hooks": {
-		"SoftwareInfo": [
-			"SoftwareVersion::addSVNInfo"
-		]
+		"SoftwareInfo": "SoftwareVersion::addSVNInfo"
 	},
 	"manifest_version": 1
 }

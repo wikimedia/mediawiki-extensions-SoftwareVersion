@@ -9,7 +9,7 @@
  * @file
  * @ingroup Extensions
  * @author Jack Phoenix <jack@shoutwiki.com>
- * @copyright Copyright © 2009-2016 Jack Phoenix
+ * @copyright Copyright © 2009-2017 Jack Phoenix
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
  */
 
@@ -23,7 +23,7 @@ class SoftwareVersion {
 	 */
 	public static function addSVNInfo( &$software ) {
 		global $wgVersion, $wgCanonicalServer, $wgSitename,
-		$wgSoftwareVersionExecutablePath, $IP;
+			$wgSoftwareVersionExecutablePath, $IP;
 
 		// Set MW version to $wgVersion
 		$software['[https://www.mediawiki.org/ MediaWiki]'] = $wgVersion;
@@ -51,7 +51,7 @@ class SoftwareVersion {
 		$json = json_encode( $svnInfo );
 		$exploded = explode( $newline, $svnInfo );
 
-		if ( $this->getMsg( 'softwareversion-wiki-link' )->isDisabled() ) {
+		if ( wfMessage( 'softwareversion-wiki-link' )->isDisabled() ) {
 			$wikiLink = "[$wgCanonicalServer $wgSitename]";
 		} else {
 			$wikiLink = wfMessage( 'softwareversion-wiki-link' )->text();
