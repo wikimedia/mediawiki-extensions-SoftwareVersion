@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Piramidion"
+		]
+	},
+	"softwareversion-desc": "Налаштовує сторінку [[Special:Version]], початково розроблено для ShoutWiki, але може використовуватись і сторонніми програмами"
+}
