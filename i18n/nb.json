@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby"
+		]
+	},
+	"softwareversion-desc": "Tilpasser [[Special:Version]], opprinnelig for ShoutWiki, men kan også brukes av tredjeparter"
+}
