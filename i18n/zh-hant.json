@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kly"
+		]
+	},
+	"softwareversion-desc": "自訂[[Special:Version]]，最初是用於 ShoutWiki 上，但可被第三方使用"
+}
