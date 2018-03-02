@@ -5,7 +5,7 @@
 		"Jack Phoenix",
 		"Samantha Nguyen"
 	],
-	"license-name": "GPL-2.0+",
+	"license-name": "GPL-2.0-or-later",
 	"url": "https://www.mediawiki.org/wiki/Extension:SoftwareVersion",
 	"descriptionmsg": "softwareversion-desc",
 	"type": "other",
