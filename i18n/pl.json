@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Railfail536"
+			"Railfail536",
+			"Rail"
 		]
 	},
 	"softwareversion-desc": "Dostosowuje stronę [[Special:Version]]. Pierwotnie zostało utworzone dla ShoutWiki, jednak może być używane również inne wiki."
