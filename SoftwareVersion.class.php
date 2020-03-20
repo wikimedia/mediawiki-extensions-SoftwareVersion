@@ -59,9 +59,9 @@ class SoftwareVersion {
 
 		// Add local wiki component (revision number and last changed date)
 		$software[$wikiLink] =
-			str_replace( 'Revision: ', 'r', $exploded[6] ) /* Revision */ .
+			str_replace( 'Revision: ', 'r', $exploded[6] ?? '-' ) /* Revision */ .
 			' (' .
-			str_replace( 'Last Changed Date: ', '', preg_replace( '/ \(.*\)/', '', $exploded[11] ) ) ./* Last Changed Date */
+			str_replace( 'Last Changed Date: ', '', preg_replace( '/ \(.*\)/', '', $exploded[11] ?? '-' ) ) ./* Last Changed Date */
 			')';
 
 		return true;
