@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Srdjan m"
+			"Srdjan m",
+			"Srđan"
 		]
 	},
 	"softwareversion-desc": "Prilagođava stranicu [[Special:Version]]. Prvobitno namijenjeno za ShoutWiki, ali ga mogu koristiti i treće strane."
