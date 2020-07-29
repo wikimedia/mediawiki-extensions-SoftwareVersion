@@ -9,6 +9,9 @@
 	"url": "https://www.mediawiki.org/wiki/Extension:SoftwareVersion",
 	"descriptionmsg": "softwareversion-desc",
 	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.34.0"
+	},
 	"config": {
 		"SoftwareVersionExecutablePath": {
 			"unix": "/usr/bin/svn",
