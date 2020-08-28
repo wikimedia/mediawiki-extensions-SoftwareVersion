@@ -19,7 +19,7 @@
 		}
 	},
 	"AutoloadClasses": {
-		"SoftwareVersion": "SoftwareVersion.class.php"
+		"SoftwareVersion": "src/SoftwareVersion.php"
 	},
 	"MessagesDirs": {
 		"SoftwareVersion": [

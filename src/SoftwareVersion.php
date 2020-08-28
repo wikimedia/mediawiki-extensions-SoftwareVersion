@@ -10,7 +10,7 @@
  * @ingroup Extensions
  * @author Jack Phoenix <jack@shoutwiki.com>
  * @copyright Copyright © 2009-2017 Jack Phoenix
- * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
+ * @license GPL-2.0-or-later
  */
 
 class SoftwareVersion {
@@ -18,7 +18,7 @@ class SoftwareVersion {
 	/**
 	 * Adds local wiki component into Special:Version and sets MW's version to $wgVersion
 	 *
-	 * @param array $software Array of software information
+	 * @param array &$software Array of software information
 	 * @return bool
 	 */
 	public static function addSVNInfo( &$software ) {
@@ -59,12 +59,13 @@ class SoftwareVersion {
 
 		// Add local wiki component (revision number and last changed date)
 		$software[$wikiLink] =
-			str_replace( 'Revision: ', 'r', $exploded[6] ?? '-' ) /* Revision */ .
+			/* Revision */
+			str_replace( 'Revision: ', 'r', $exploded[6] ?? '-' ) .
 			' (' .
-			str_replace( 'Last Changed Date: ', '', preg_replace( '/ \(.*\)/', '', $exploded[11] ?? '-' ) ) ./* Last Changed Date */
+			/* Last Changed Date */
+			str_replace( 'Last Changed Date: ', '', preg_replace( '/ \(.*\)/', '', $exploded[11] ?? '-' ) ) .
 			')';
 
 		return true;
 	}
-
 }
