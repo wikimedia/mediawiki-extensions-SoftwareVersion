@@ -16,12 +16,13 @@
 class SoftwareVersion {
 
 	/**
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/SoftwareInfo
+	 *
 	 * Adds local wiki component into Special:Version and sets MW's version to $wgVersion
 	 *
-	 * @param array &$software Array of software information
-	 * @return bool
+	 * @param string[] &$software Array of software information
 	 */
-	public static function addSVNInfo( &$software ) {
+	public static function addSVNInfo( array &$software ) {
 		global $wgVersion, $wgCanonicalServer, $wgSitename,
 			$wgSoftwareVersionExecutablePath, $IP;
 
@@ -48,7 +49,6 @@ class SoftwareVersion {
 			$newline = "\r\n";
 		}
 
-		$json = json_encode( $svnInfo );
 		$exploded = explode( $newline, $svnInfo );
 
 		if ( wfMessage( 'softwareversion-wiki-link' )->isDisabled() ) {
@@ -65,7 +65,5 @@ class SoftwareVersion {
 			/* Last Changed Date */
 			str_replace( 'Last Changed Date: ', '', preg_replace( '/ \(.*\)/', '', $exploded[11] ?? '-' ) ) .
 			')';
-
-		return true;
 	}
 }
