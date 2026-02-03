@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Red Winged Duck"
+			"Red Winged Duck",
+			"Ucukor"
 		]
 	},
-	"softwareversion-desc": "Мадыфікуе [[Special:Version]], першапачаткова створана для ShoutWiki, але можа быць выкарыстаная іншымі праектамі."
+	"softwareversion-desc": "Мадыфікуе [[Special:Version]], пачаткова створана для ShoutWiki, але можа быць ужытая іншымі праектамі."
 }
